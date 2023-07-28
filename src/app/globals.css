@@ -20,3 +20,18 @@
   -ms-user-select: none;
   user-select: none;
 }
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.move-up-down {
+  /* Use the animation utility to apply the animation */
+  animation: moveUpDown 1.5s linear infinite;
+}
