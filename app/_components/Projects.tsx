@@ -52,7 +52,7 @@ export default function Projects() {
           {projects.map(({ name, description, tags, href }) => (
             <div
               key={name}
-              className="border border-zinc-800 rounded-lg p-6 bg-zinc-900/20 hover:border-cyan-500/30 transition-colors flex flex-col"
+              className="border border-white/10 rounded-xl p-6 bg-white/5 backdrop-blur-sm hover:border-emerald-500/30 hover:bg-white/[0.08] transition-all flex flex-col"
             >
               <div className="flex items-start justify-between mb-3">
                 <h3 className="font-semibold text-white text-base leading-snug">
@@ -62,7 +62,7 @@ export default function Projects() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-600 hover:text-cyan-400 transition-colors ml-3 shrink-0 mt-0.5"
+                  className="text-zinc-600 hover:text-emerald-400 transition-colors ml-3 shrink-0 mt-0.5"
                   aria-label={`View ${name}`}
                 >
                   <ExternalLinkIcon />
@@ -75,7 +75,7 @@ export default function Projects() {
                 {tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-2 py-0.5 rounded text-xs font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20"
+                    className="px-2 py-0.5 rounded text-xs font-mono bg-emerald-500/10 text-emerald-300 border border-emerald-500/20"
                   >
                     {tag}
                   </span>
