@@ -22,12 +22,12 @@ export default function Nav() {
     <nav
       className={`fixed top-0 inset-x-0 z-50 h-14 transition-all duration-300 ${
         scrolled
-          ? "bg-[#080c10]/90 backdrop-blur-md border-b border-zinc-800"
+          ? "bg-white/5 backdrop-blur-md border-b border-white/10"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-5xl mx-auto w-full px-6 h-full flex items-center justify-between">
-        <span className="font-mono text-cyan-400 text-sm select-none">
+        <span className="font-mono text-sm select-none bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
           rd@portfolio:~$
         </span>
         <div className="hidden sm:flex items-center gap-6">
@@ -35,7 +35,7 @@ export default function Nav() {
             <a
               key={href}
               href={href}
-              className="font-mono text-sm text-zinc-400 hover:text-cyan-400 transition-colors"
+              className="font-mono text-sm text-zinc-400 hover:text-emerald-400 transition-colors"
             >
               {label}
             </a>

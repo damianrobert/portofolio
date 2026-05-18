@@ -52,9 +52,9 @@ export default function CertificationCard({ name, issuer, href, logo, skills }: 
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="border border-zinc-800 rounded-lg bg-zinc-900/20 hover:border-cyan-500/30 transition-colors">
+    <div className="border border-white/10 rounded-xl bg-white/5 backdrop-blur-sm hover:border-emerald-500/30 transition-colors">
       <div className="flex items-center gap-4 px-5 py-4">
-        <div className="w-10 h-10 rounded-md bg-zinc-800 border border-zinc-700 shrink-0 flex items-center justify-center p-2">
+        <div className="w-10 h-10 rounded-lg bg-white/10 border border-white/10 shrink-0 flex items-center justify-center p-2">
           <Image
             src={logo}
             alt={issuer}
@@ -74,7 +74,7 @@ export default function CertificationCard({ name, issuer, href, logo, skills }: 
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
             aria-label="View credential"
-            className="text-zinc-600 hover:text-cyan-400 transition-colors"
+            className="text-zinc-600 hover:text-emerald-400 transition-colors"
           >
             <ExternalLinkIcon />
           </a>
@@ -82,7 +82,7 @@ export default function CertificationCard({ name, issuer, href, logo, skills }: 
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Collapse skills" : "Show skills"}
             aria-expanded={open}
-            className="text-zinc-600 hover:text-cyan-400 transition-colors cursor-pointer"
+            className="text-zinc-600 hover:text-emerald-400 transition-colors cursor-pointer"
           >
             <ChevronIcon open={open} />
           </button>
@@ -95,11 +95,11 @@ export default function CertificationCard({ name, issuer, href, logo, skills }: 
         }`}
       >
         <div className="overflow-hidden">
-          <div className="px-5 pb-4 pt-1 flex flex-wrap gap-2 border-t border-zinc-800/60">
+          <div className="px-5 pb-4 pt-1 flex flex-wrap gap-2 border-t border-white/10">
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="px-2 py-0.5 rounded text-xs font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20"
+                className="px-2 py-0.5 rounded text-xs font-mono bg-emerald-500/10 text-emerald-300 border border-emerald-500/20"
               >
                 {skill}
               </span>

@@ -67,16 +67,16 @@ export default function Skills() {
           {skills.map(({ category, items }) => (
             <div
               key={category}
-              className="border border-zinc-800 rounded-lg p-6 bg-zinc-900/20 hover:border-cyan-500/30 transition-colors"
+              className="border border-white/10 rounded-lg p-6 bg-white/5 backdrop-blur-sm hover:border-emerald-500/30 hover:bg-white/[0.08] transition-all"
             >
-              <h3 className="font-mono text-cyan-400 text-xs mb-4 tracking-widest uppercase">
+              <h3 className="font-mono text-xs mb-4 tracking-widest uppercase bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
                 {category}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {items.map((item) => (
                   <span
                     key={item}
-                    className="px-2 py-1 rounded text-xs font-mono bg-zinc-800 text-zinc-300 border border-zinc-700"
+                    className="px-2 py-1 rounded text-xs font-mono bg-white/5 text-zinc-300 border border-white/10"
                   >
                     {item}
                   </span>

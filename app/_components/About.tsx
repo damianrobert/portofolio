@@ -35,9 +35,9 @@ export default function About() {
             {details.map(([label, value]) => (
               <div
                 key={label}
-                className="flex items-center gap-3 font-mono text-sm border border-zinc-800 rounded px-4 py-3 bg-zinc-900/30"
+                className="flex items-center gap-3 font-mono text-sm border border-white/10 rounded-lg px-4 py-3 bg-white/5 backdrop-blur-sm"
               >
-                <span className="text-cyan-400 w-20 shrink-0">{label}:</span>
+                <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent w-20 shrink-0">{label}:</span>
                 <span className="text-zinc-300">{value}</span>
               </div>
             ))}
