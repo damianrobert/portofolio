@@ -1,0 +1,48 @@
+{
+    Title: LFCA: Linux Foundation Certified IT Associate
+    Organization: The Linux Foundation
+    URL: https://www.credly.com/badges/45e5cba7-4284-4264-90e5-b39d09fa0e1a/linked_in_profile
+    Skills: [Linux, Linux Network Administration, Linux System Administration, SELinux, Kubernetes, Kubernetes, Kubernetes, Web Services API, Git, DevOps, Scripting, Cloud Computing, Cloud Applications, Automation]
+},
+{
+    Title: LFS158: Introduction to Kubernetes
+    Organization: The Linux Foundation
+    URL: https://www.credly.com/badges/86637b57-63b0-4410-b32b-1e5a25e9277c/linked_in_profile
+    Skills: [Software Development Life Cycle (SDLC), DevOps, Kubernetes, Containers]
+},
+{
+    Title: LFS162: Introduction to DevOps and Site Reliability Engineering
+    Organization: The Linux Foundation
+    URL: https://www.credly.com/badges/89bef102-22fd-4d9b-a282-c9cc39306364/linked_in_profile
+    Skills: [Linux, Software Development Life Cycle (SDLC), Site Reliability Engineering, DevOps Foundations, Cloud Applications, NetDevOps, Cross-platform Development, Platform Engineering]
+},
+{
+    Title: DevNet Associate 200-901
+    Organization: Cisco
+    URL: https://cp.certmetrics.com/cisco/en/public/verify/credential/1e03a1451bc84a8cb11ea34789af21ca
+    Skills: [Automation, Python (Programming Language), Bash, Software Development Life Cycle (SDLC), Web Services API, Cisco Unified Communications Manager (CUCM), Git, DevOps, NetDevOps, Linux Network Administration, Containers, Cloud Applications, DevOps Foundations, Linux, Shell Scripting]
+},
+{
+    Title: Cisco Certified Network Associate 200-301 (CCNA)
+    Organization: Cisco
+    URL: https://cp.certmetrics.com/cisco/en/public/verify/credential/c085103aa49e4cf6ba28a138cb66fac9
+    Skills: [Network Design, Network Switches, Cisco Routers, Network Security, Linux Network Administration]
+},
+{
+    Title: Oracle Certified Associate, Oracle Solaris 11 System Administrator
+    Organization: Oracle
+    URL: https://catalog-education.oracle.com/pls/certview/sharebadge?id=F73F0A99F71737D58599B122EAE25970F1D948A16E76CA54283D9F9880F01902
+    Skills: [Bash, Shell Scripting, Linux, Storage Management]
+},
+{
+    Title: [PCAP-31-03] PCAP™ – Certified Associate Python Programmer
+    Organization: Python Developer
+    URL: https://www.credly.com/badges/65724e55-04dd-4a4d-bdcf-045b9a512fc8/linked_in_profile
+    Skills: [Python (Programming Language), Scripting]
+},
+{
+    Title: Introduction to Cybersecurity
+    Organization: Cisco
+    URL: https://www.credly.com/badges/1ea73f6a-45aa-476d-a4c3-17efc26672ee/linked_in_profile
+    Skills: [Network Design, Network Security, Cybersecurity, Virtual Private Network (VPN)]
+}
