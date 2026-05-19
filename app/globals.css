@@ -9,6 +9,17 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  cursor: default;
+}
+
+a,
+button,
+[role="button"],
+[tabindex]:not([tabindex="-1"]) {
+  cursor: pointer;
+}
+
 body {
   background:
     radial-gradient(ellipse 80% 50% at 15% 10%, rgba(52, 211, 153, 0.13) 0%, transparent 60%),
@@ -29,3 +40,82 @@ body {
   background: linear-gradient(to bottom, #34d399, #60a5fa);
   border-radius: 9999px;
 }
+
+.readme-prose {
+  color: #cdd9e5;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+.readme-prose h1,
+.readme-prose h2,
+.readme-prose h3,
+.readme-prose h4 {
+  color: #fff;
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+.readme-prose h1 { font-size: 1.5rem; }
+.readme-prose h2 { font-size: 1.25rem; }
+.readme-prose h3 { font-size: 1.1rem; }
+.readme-prose p { margin-bottom: 1em; }
+.readme-prose a { color: #34d399; text-decoration: underline; }
+.readme-prose a:hover { color: #6ee7b7; }
+.readme-prose ul,
+.readme-prose ol {
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+.readme-prose ul { list-style: disc; }
+.readme-prose ol { list-style: decimal; }
+.readme-prose li { margin-bottom: 0.25em; }
+.readme-prose code {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  color: #34d399;
+}
+.readme-prose pre {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 1em;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+.readme-prose pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #cdd9e5;
+  font-size: 0.85em;
+}
+.readme-prose blockquote {
+  border-left: 3px solid #34d399;
+  padding-left: 1em;
+  color: #8b949e;
+  margin-bottom: 1em;
+}
+.readme-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+  font-size: 0.85em;
+}
+.readme-prose th,
+.readme-prose td {
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 0.5em 0.75em;
+  text-align: left;
+}
+.readme-prose th { background: rgba(255,255,255,0.05); color: #fff; }
+.readme-prose hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin: 1.5em 0;
+}
+.readme-prose img { max-width: 100%; border-radius: 6px; }
