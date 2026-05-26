@@ -34,7 +34,12 @@ const skills = [
   },
   {
     category: "Cloud & Containers",
-    items: ["Cloud Computing", "Cloud Applications", "Kubernetes", "Containers"],
+    items: [
+      "Cloud Computing",
+      "Cloud Applications",
+      "Kubernetes",
+      "Containers",
+    ],
   },
   {
     category: "DevOps & SRE",
@@ -92,10 +97,14 @@ export default function Skills() {
         </div>
         <div className="mt-8 flex flex-col items-center gap-3">
           <p className="text-zinc-400 text-sm text-center">
-            Earned by completing a series of Linux troubleshooting challenges on{" "}
-            <span className="text-zinc-200">SadServers</span> — real-world broken server scenarios solved in the terminal.
+            {t.skills.sadserversBadgeDescription}
           </p>
-          <a href="https://sadservers.com/u/Roberto-Damian+Radulescu" target="_blank" rel="noopener noreferrer">
+          <a
+            className="cursor-pointer"
+            href="https://sadservers.com/u/Roberto-Damian+Radulescu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src="https://img.shields.io/badge/SadServers-Advanced-7B1FA2?style=for-the-badge&labelColor=FFC400&logo=terraform&logoColor=1A237E&logoSize=auto"
               alt="SadServers Level"

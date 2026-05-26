@@ -44,6 +44,8 @@ export const translations = {
     skills: {
       tag: "// skills",
       title: "Technical Skills",
+      sadserversBadgeDescription:
+        "Earned by completing a series of Linux troubleshooting challenges on SadServers — real-world broken server scenarios solved in the terminal.",
     },
     projects: {
       tag: "// projects",
@@ -104,6 +106,8 @@ export const translations = {
     skills: {
       tag: "// competențe",
       title: "Competențe Tehnice",
+      sadserversBadgeDescription:
+        "Obținut prin completarea unei serii de provocări de depanare Linux pe SadServers — scenarii reale cu servere defecte rezolvate în terminal.",
     },
     projects: {
       tag: "// proiecte",
