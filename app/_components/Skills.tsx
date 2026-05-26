@@ -99,17 +99,18 @@ export default function Skills() {
           <p className="text-zinc-400 text-sm text-center">
             {t.skills.sadserversBadgeDescription}
           </p>
-          <a
-            className="cursor-pointer"
-            href="https://sadservers.com/u/Roberto-Damian+Radulescu"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="https://img.shields.io/badge/SadServers-Advanced-7B1FA2?style=for-the-badge&labelColor=FFC400&logo=terraform&logoColor=1A237E&logoSize=auto"
-              alt="SadServers Level"
-            />
-          </a>
+          <div className="cursor-pointer">
+            <a
+              href="https://sadservers.com/u/Roberto-Damian+Radulescu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://img.shields.io/badge/SadServers-Advanced-7B1FA2?style=for-the-badge&labelColor=FFC400&logo=terraform&logoColor=1A237E&logoSize=auto"
+                alt="SadServers Level"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </section>
