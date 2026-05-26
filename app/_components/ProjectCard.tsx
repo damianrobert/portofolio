@@ -139,7 +139,7 @@ export default function ProjectCard({ repo }: { repo: GithubRepo }) {
                       img: ({ src, alt, ...props }) => (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
-                          src={resolveImageSrc(src, repo.slug, repo.default_branch)}
+                          src={resolveImageSrc(src as string | undefined, repo.slug, repo.default_branch)}
                           alt={alt ?? ""}
                           style={{ maxWidth: "100%" }}
                           {...props}
