@@ -1,4 +1,10 @@
+"use client";
+
+import { useLanguage } from "../_context/language";
+
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
@@ -25,10 +31,10 @@ export default function Hero() {
         </h1>
 
         <p className="font-mono text-zinc-400 text-lg sm:text-xl mb-3">
-          Network Technician
+          {t.hero.role}
         </p>
         <p className="text-zinc-500 text-base mb-10 max-w-sm mx-auto">
-          Building reliable infrastructure, one system at a time.
+          {t.hero.tagline}
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center">
@@ -58,7 +64,7 @@ export default function Hero() {
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <span className="text-zinc-600 text-xs font-mono">scroll</span>
+        <span className="text-zinc-600 text-xs font-mono">{t.hero.scroll}</span>
         <div className="w-px h-8 bg-gradient-to-b from-emerald-500/50 to-transparent" />
       </div>
     </section>

@@ -1,27 +1,24 @@
+"use client";
+
 import Link from "next/link";
 import SectionHeader from "./SectionHeader";
-
-const details = [
-  ["Location", "Romania"],
-  ["Position", "Network Technician"],
-  ["Company", "CANCOM Romania"],
-  ["Focus", "Linux, DevOps & Platform Engineering"],
-  ["Status", "Open to opportunities"],
-] as const;
+import { useLanguage } from "../_context/language";
 
 const companyLinks: Record<string, string> = {
   "CANCOM Romania": "https://www.cancom.ro",
 };
 
 export default function About() {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
-        <SectionHeader tag="// about_me" title="About Me" />
+        <SectionHeader tag={t.about.tag} title={t.about.title} />
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-4 text-zinc-400 leading-relaxed text-base">
             <p>
-              I&apos;m a Network Technician at{" "}
+              {t.about.p1Before}
               <Link
                 href="https://www.cancom.ro"
                 target="_blank"
@@ -30,23 +27,13 @@ export default function About() {
               >
                 CANCOM Romania
               </Link>
-              , working at the intersection of networking, infrastructure, and
-              systems to keep things running reliably.
+              {t.about.p1After}
             </p>
-            <p>
-              I&apos;m enthusiastic about Linux, DevOps, and platform
-              engineering — drawn to the challenge of building scalable,
-              automated systems and turning complex infrastructure into
-              something clean and maintainable.
-            </p>
-            <p>
-              When I&apos;m not on the job, you&apos;ll find me tinkering in my
-              homelab, chasing the next certification, or exploring new tools in
-              the DevOps and cloud-native ecosystem.
-            </p>
+            <p>{t.about.p2}</p>
+            <p>{t.about.p3}</p>
           </div>
           <div className="space-y-3">
-            {details.map(([label, value]) => (
+            {t.about.details.map(([label, value]) => (
               <div
                 key={label}
                 className="flex items-center gap-3 font-mono text-sm border border-white/10 rounded-lg px-4 py-3 bg-white/5 backdrop-blur-sm"

@@ -1,5 +1,5 @@
-import SectionHeader from "./SectionHeader";
-import ProjectCard, { type GithubRepo } from "./ProjectCard";
+import ProjectsGrid from "./ProjectsGrid";
+import { type GithubRepo } from "./ProjectCard";
 import { GITHUB_REPOS } from "../_data/repos";
 
 function toSlug(entry: string): string {
@@ -38,20 +38,5 @@ export default async function Projects() {
     (r): r is GithubRepo => r !== null
   );
 
-  return (
-    <section id="projects" className="py-24 px-6">
-      <div className="max-w-5xl mx-auto">
-        <SectionHeader tag="// projects" title="Projects" />
-        {repos.length === 0 ? (
-          <p className="text-zinc-500 text-sm">No projects to display yet.</p>
-        ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {repos.map((repo) => (
-              <ProjectCard key={repo.slug} repo={repo} />
-            ))}
-          </div>
-        )}
-      </div>
-    </section>
-  );
+  return <ProjectsGrid repos={repos} />;
 }

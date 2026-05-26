@@ -1,4 +1,7 @@
+"use client";
+
 import SectionHeader from "./SectionHeader";
+import { useLanguage } from "../_context/language";
 
 const skills = [
   {
@@ -59,10 +62,12 @@ const skills = [
 ];
 
 export default function Skills() {
+  const { t } = useLanguage();
+
   return (
     <section id="skills" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
-        <SectionHeader tag="// skills" title="Technical Skills" />
+        <SectionHeader tag={t.skills.tag} title={t.skills.title} />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {skills.map(({ category, items }) => (
             <div

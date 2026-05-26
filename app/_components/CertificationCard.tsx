@@ -46,9 +46,19 @@ type Props = {
   href: string;
   logo: string;
   skills: string[];
+  expandLabel?: string;
+  collapseLabel?: string;
 };
 
-export default function CertificationCard({ name, issuer, href, logo, skills }: Props) {
+export default function CertificationCard({
+  name,
+  issuer,
+  href,
+  logo,
+  skills,
+  expandLabel = "Show skills",
+  collapseLabel = "Collapse skills",
+}: Props) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -80,7 +90,7 @@ export default function CertificationCard({ name, issuer, href, logo, skills }: 
           </a>
           <button
             onClick={() => setOpen((v) => !v)}
-            aria-label={open ? "Collapse skills" : "Show skills"}
+            aria-label={open ? collapseLabel : expandLabel}
             aria-expanded={open}
             className="text-zinc-600 hover:text-emerald-400 transition-colors cursor-pointer"
           >

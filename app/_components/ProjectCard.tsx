@@ -27,7 +27,21 @@ export type GithubRepo = {
   default_branch: string;
 };
 
-export default function ProjectCard({ repo }: { repo: GithubRepo }) {
+type ProjectCardProps = {
+  repo: GithubRepo;
+  viewOnGithub?: string;
+  loadingReadme?: string;
+  noReadme?: string;
+  noDescription?: string;
+};
+
+export default function ProjectCard({
+  repo,
+  viewOnGithub = "View on GitHub",
+  loadingReadme = "Loading README…",
+  noReadme = "No README found for this repository.",
+  noDescription = "No description provided.",
+}: ProjectCardProps) {
   const [open, setOpen] = useState(false);
   const [readme, setReadme] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -75,7 +89,7 @@ export default function ProjectCard({ repo }: { repo: GithubRepo }) {
           </a>
         </div>
         <p className="text-zinc-500 text-sm leading-relaxed mb-4 flex-1">
-          {repo.description ?? "No description provided."}
+          {repo.description ?? noDescription}
         </p>
         {repo.topics.length > 0 && (
           <div className="flex flex-wrap gap-2">
@@ -109,7 +123,7 @@ export default function ProjectCard({ repo }: { repo: GithubRepo }) {
                   rel="noopener noreferrer"
                   className="flex items-center gap-1.5 text-xs text-emerald-400 hover:text-emerald-300 transition-colors"
                 >
-                  View on GitHub
+                  {viewOnGithub}
                   <ExternalLinkIcon />
                 </a>
                 <button
@@ -124,12 +138,10 @@ export default function ProjectCard({ repo }: { repo: GithubRepo }) {
 
             <div className="overflow-y-auto px-6 py-5">
               {loading && (
-                <p className="text-zinc-500 text-sm">Loading README…</p>
+                <p className="text-zinc-500 text-sm">{loadingReadme}</p>
               )}
               {fetchError && (
-                <p className="text-zinc-500 text-sm">
-                  No README found for this repository.
-                </p>
+                <p className="text-zinc-500 text-sm">{noReadme}</p>
               )}
               {readme && (
                 <div className="readme-prose">

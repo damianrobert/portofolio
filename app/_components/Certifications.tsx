@@ -1,5 +1,8 @@
+"use client";
+
 import SectionHeader from "./SectionHeader";
 import CertificationCard from "./CertificationCard";
+import { useLanguage } from "../_context/language";
 
 const certifications = [
   {
@@ -105,13 +108,20 @@ const certifications = [
 ];
 
 export default function Certifications() {
+  const { t } = useLanguage();
+
   return (
     <section id="certifications" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
-        <SectionHeader tag="// certifications" title="Certifications" />
+        <SectionHeader tag={t.certifications.tag} title={t.certifications.title} />
         <div className="space-y-3">
           {certifications.map((cert) => (
-            <CertificationCard key={cert.name} {...cert} />
+            <CertificationCard
+              key={cert.name}
+              {...cert}
+              expandLabel={t.certifications.expandSkills}
+              collapseLabel={t.certifications.collapseSkills}
+            />
           ))}
         </div>
       </div>
