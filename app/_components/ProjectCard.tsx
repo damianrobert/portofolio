@@ -4,6 +4,20 @@ import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
+function resolveImageSrc(src: string | undefined, slug: string, branch: string): string {
+  if (!src) return "";
+  if (src.startsWith("http://") || src.startsWith("https://")) {
+    // Convert GitHub blob viewer URLs to raw content URLs
+    const blobMatch = src.match(/^https:\/\/github\.com\/(.+?)\/blob\/(.+)$/);
+    if (blobMatch) return `https://raw.githubusercontent.com/${blobMatch[1]}/${blobMatch[2]}`;
+    return src;
+  }
+  const base = `https://raw.githubusercontent.com/${slug}/${branch}/`;
+  return src.startsWith("/")
+    ? `https://raw.githubusercontent.com/${slug}/${branch}${src}`
+    : `${base}${src.replace(/^\.\//, "")}`;
+}
+
 export type GithubRepo = {
   slug: string;
   name: string;
@@ -119,7 +133,20 @@ export default function ProjectCard({ repo }: { repo: GithubRepo }) {
               )}
               {readme && (
                 <div className="readme-prose">
-                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                      img: ({ src, alt, ...props }) => (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={resolveImageSrc(src, repo.slug, repo.default_branch)}
+                          alt={alt ?? ""}
+                          style={{ maxWidth: "100%" }}
+                          {...props}
+                        />
+                      ),
+                    }}
+                  >
                     {readme}
                   </ReactMarkdown>
                 </div>
