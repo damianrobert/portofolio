@@ -3,7 +3,7 @@ import SectionHeader from "./SectionHeader";
 
 const details = [
   ["Location", "Romania"],
-  ["Role", "Network Technician"],
+  ["Position", "Network Technician"],
   ["Company", "CANCOM Romania"],
   ["Focus", "Linux, DevOps & Platform Engineering"],
   ["Status", "Open to opportunities"],

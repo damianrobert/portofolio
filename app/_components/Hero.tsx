@@ -25,7 +25,7 @@ export default function Hero() {
         </h1>
 
         <p className="font-mono text-zinc-400 text-lg sm:text-xl mb-3">
-          System Engineer
+          Network Technician
         </p>
         <p className="text-zinc-500 text-base mb-10 max-w-sm mx-auto">
           Building reliable infrastructure, one system at a time.

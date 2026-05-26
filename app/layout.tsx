@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rădulescu Roberto-Damian | System Engineer",
+  title: "Rădulescu Roberto-Damian | Network Technician",
   description:
-    "Personal portfolio of Rădulescu Roberto-Damian, System Engineer based in Romania.",
+    "Personal portfolio of Rădulescu Roberto-Damian, Network Technician based in Romania.",
 };
 
 export default function RootLayout({
