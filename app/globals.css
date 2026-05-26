@@ -14,8 +14,11 @@ html {
 }
 
 a,
+a *,
 button,
+button *,
 [role="button"],
+[role="button"] *,
 [tabindex]:not([tabindex="-1"]) {
   cursor: pointer;
 }
