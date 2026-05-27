@@ -25,10 +25,10 @@ export default function Hero() {
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-tight mb-4">
           Rădulescu
           <br />
-          <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl whitespace-nowrap">
+          <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent text-3xl sm:text-5xl md:text-7xl whitespace-nowrap">
             Roberto-Damian
           </span>
-          <span className="text-emerald-400 animate-pulse text-3xl sm:text-4xl md:text-5xl">
+          <span className="text-emerald-400 animate-pulse text-3xl sm:text-5xl md:text-7xl">
             _
           </span>
         </h1>
