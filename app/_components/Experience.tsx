@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import SectionHeader from "./SectionHeader";
 import { useLanguage } from "../_context/language";
@@ -31,6 +32,18 @@ function duration(
 
 export default function Experience() {
   const { t } = useLanguage();
+  const [durationText, setDurationText] = useState("");
+
+  useEffect(() => {
+    setDurationText(
+      duration(company.start, company.end, {
+        yr: t.experience.yr,
+        yrs: t.experience.yrs,
+        mo: t.experience.mo,
+        mos: t.experience.mos,
+      })
+    );
+  }, [t]);
 
   return (
     <section id="experience" className="py-24 px-6">
@@ -53,13 +66,7 @@ export default function Experience() {
                     </h3>
                     <span className="font-mono text-xs text-zinc-500">
                       {company.start} – {company.end ?? t.experience.present}{" "}
-                      &middot;{" "}
-                      {duration(company.start, company.end, {
-                        yr: t.experience.yr,
-                        yrs: t.experience.yrs,
-                        mo: t.experience.mo,
-                        mos: t.experience.mos,
-                      })}
+                      {durationText && <>&middot; {durationText}</>}
                     </span>
                   </div>
                   <Link
