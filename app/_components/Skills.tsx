@@ -1,9 +1,55 @@
 "use client";
 
+import {
+  siLinux,
+  siDocker,
+  siWireshark,
+  siTruenas,
+  siPython,
+  siContainerd,
+  siKubernetes,
+  siNginx,
+  siNodedotjs,
+  siHtml5,
+  siGnubash,
+  siGit,
+  siAnsible,
+  siPrometheus,
+  siElasticsearch,
+  siVault,
+  siPostman,
+  siGithubactions,
+  siRedhat,
+  siGooglecloud,
+} from "simple-icons";
+
 import SectionHeader from "./SectionHeader";
 import { useLanguage } from "../_context/language";
 
-const skills = [
+const techCards = [
+  { icon: siLinux, label: "Linux" },
+  { icon: siDocker, label: "Docker" },
+  { icon: siWireshark, label: "Networking" },
+  { icon: siTruenas, label: "Storage Admin" },
+  { icon: siPython, label: "Python" },
+  { icon: siContainerd, label: "Containers" },
+  { icon: siKubernetes, label: "Kubernetes" },
+  { icon: siNginx, label: "Nginx" },
+  { icon: siNodedotjs, label: "Node.js" },
+  { icon: siHtml5, label: "Web Dev" },
+  { icon: siGnubash, label: "Bash" },
+  { icon: siGit, label: "Git" },
+  { icon: siAnsible, label: "Ansible" },
+  { icon: siPrometheus, label: "Monitoring" },
+  { icon: siElasticsearch, label: "Logging" },
+  { icon: siVault, label: "Secret Mgmt" },
+  { icon: siPostman, label: "REST API" },
+  { icon: siGithubactions, label: "CI/CD" },
+  { icon: siRedhat, label: "SELinux" },
+  { icon: siGooglecloud, label: "Cloud" },
+];
+
+const categories = [
   {
     category: "Systems & Linux",
     items: [
@@ -73,8 +119,31 @@ export default function Skills() {
     <section id="skills" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <SectionHeader tag={t.skills.tag} title={t.skills.title} />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {skills.map(({ category, items }) => (
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+          {techCards.map(({ icon, label }) => (
+            <div
+              key={label}
+              className="flex flex-col items-center gap-3 p-5 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-emerald-500/40 hover:bg-white/[0.09] hover:-translate-y-0.5 transition-all duration-200"
+            >
+              <svg
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-8 h-8"
+                style={{ fill: `#${icon.hex}` }}
+                aria-label={icon.title}
+              >
+                <path d={icon.path} />
+              </svg>
+              <span className="text-xs font-mono text-zinc-300 text-center leading-tight">
+                {label}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {categories.map(({ category, items }) => (
             <div
               key={category}
               className="border border-white/10 rounded-lg p-6 bg-white/5 backdrop-blur-sm hover:border-emerald-500/30 hover:bg-white/[0.08] transition-all"
@@ -95,7 +164,7 @@ export default function Skills() {
             </div>
           ))}
         </div>
-        <div className="mt-8 flex flex-col items-center gap-3">
+        <div className="mt-10 flex flex-col items-center gap-3">
           <p className="text-zinc-400 text-sm text-center">
             {t.skills.sadserversBadgeDescription}
           </p>
